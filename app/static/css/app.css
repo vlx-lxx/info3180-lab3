@@ -1,3 +1,34 @@
 body {
     padding-top: 5rem;
 }
+
+p{
+    margin: 0 0 12px;
+}
+
+.form-rule{
+    padding-bottom: 12px;
+}
+
+input{
+    width: 25%;
+}
+
+textarea{
+    width: 30%;
+}
+
+button{
+    background-color:  rgb(2, 133, 215);
+    border-radius: 5px;
+    width: 10%;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+    margin-top: 20px;
+    
+}

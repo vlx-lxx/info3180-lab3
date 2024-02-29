@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block main %}
+<header style="font-size: 30px; font-weight: bold;">Contact Form</header>
+<hr>
+<p class="form-rule">Fill in this form to contact the site owners.</p>
+<form method="post" action="{{ url_for('contact') }}" novalidate>
+    {{ form.csrf_token }}
+    <div class="" style="padding-bottom: 20px;">
+        <p style="font-weight: bold;">{{ form.name.label }}<span style="color: red;">&nbsp;(Required)</span></p>
+        <p>Please enter your full name.</p>
+        <div class="form-sub">{{ form.name }}</div>
+    </div>
+    <div style="padding-bottom: 20px;">
+        <p style="font-weight: bold;">{{ form.email.label }}<span style="color: red;">&nbsp;(Required)</span></p>
+        <p>Please enter your e-mail address.</p>
+        <div class="form-sub">{{ form.email }}</div>
+    </div>
+    <div style="padding-bottom: 20px;">
+        <p style="font-weight: bold;">{{ form.subject.label }}<span style="color: red;">&nbsp;(Required)</span></p>
+        <p>Please enter the subject for your message.</p>
+        <div class="form-sub">{{ form.subject }}</div>
+    </div>
+    <div>
+        <p style="font-weight: bold;">{{ form.message.label }}<span style="color: red;">&nbsp;(Required)</span></p>
+        <p>Please enter the message you would like to send.</p>
+        <div class="form-sub">{{ form.message }}</div>
+    </div>
+    <button type="submit">Send</button>
+</form>
+{% endblock %}
